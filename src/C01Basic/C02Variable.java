@@ -112,17 +112,34 @@ public class C02Variable {
 //        int b = 4;
 //        System.out.println((double) a / b);
 
-//        // char -> int : 문제없음
+//        // char -> int : 문제없음(문자는 기본적으로 아스키코드로 숫자값을 갖고있기 때문에)
 //        char c1 = 'a';
 //        int i1 = (int)c1; // 명시적 타입변환(중복 형 변환 경고문 발생)
 //        int i2 = c1;
 //        System.out.println(i1);
 //        System.out.println(i2);
 //        // 예시 : 문자 비교를 위한 묵시적 타입 변환
-        System.out.println('a' > 'b');
+//        System.out.println('a' > 'b');
 
-        // 관련 문제 풀이 : 알파벳 소문자 개수 세기
-        //
+//        // 관련 문제 풀이 : 알파벳 개수 세기
+//        String st1 = "01aZFbcsdf한글123";
+//        int count = 0;
+//        for (int i = 0; i < st1.length(); i++) {
+//            char ch = st1.charAt(i);
+//            if ((ch >= 'a' && ch <= 'z')||(ch >= 'A' && ch <= 'Z')) count++;
+//        }
+//        System.out.println(count);
+
+
+        /* ************ 변수와 상수 ************ */
+        // 변수: 재할당 가능, 재선언 불가능
+        int a1 = 10;
+        a1 = 20;
+//        int a1 = 30; // 재선언 허용 X
+
+        // 상수: 값의 재할당 불가능, 정해진 값(고정된 값) 사용 시 상수 활용
+        final double PI = 3.141592;
+//        PI = 3.15; // 재할당 허용 X
 
     }
 }
