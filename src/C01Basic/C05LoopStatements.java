@@ -8,7 +8,7 @@ public class C05LoopStatements {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //        /* ************ while문 ************ */
-//        // while문의 조건식에 변화를 주지 않으면, while문은 기본적으로 무한루프를 지향
+//        //📍 while문의 조건식에 변화를 주지 않으면, while문은 기본적으로 무한루프를 지향
 //        int a = 0;
 //        // 아래 while문은 10번 반복되는 반복문
 //        while (a < 10) {
@@ -30,7 +30,8 @@ public class C05LoopStatements {
 //            if (c > 10) break;
 //        }
 
-//        // 반복되는 도어락키 예제
+//        // [📝실습예제]
+//        // 요구사항: 반복되는 도어락키 예제
 //        // 만약 비밀번호를 맞추면 "문이 열렸습니다"출력 후 즉시 종료,
 //        // 5회 입력을 초과할 때 까지 맞추지 못하면 "비밀번호 5회 초과" 출력 후 종료
 //        int count = 0;
@@ -50,7 +51,8 @@ public class C05LoopStatements {
 //            }
 //        }
 
-//        // 구구단 예제 : 입력한 숫자의 구구단 단수 출력
+//        // [📝실습예제]
+//        // 요구사항: 구구단 예제 : 입력한 숫자의 구구단 단수 출력
 //        // ex) 2 입력 -> 2X1=2 \n 2X2=4 \n 2X3=6... \n 2X9=18, 입력은 무한으로 계속 받도록
 //        while (true) {
 //            int input = Integer.parseInt(br.readLine());
@@ -80,8 +82,8 @@ public class C05LoopStatements {
             }
         }
 
-        // continue : 반복문의 증감, 조건식으로 이동하는 명령어. 즉, continue 하위의 코드를 더이상 실행하지 않는다
-        // 코드의 직관성과 가독성을 위해 사용
+        //📍 continue : 반복문의 증감, 조건식으로 이동하는 명령어. 즉, continue 하위의 코드를 더이상 실행하지 않는다
+        //   코드의 직관성과 가독성을 위해 사용
         for (int i = 0; i < 10; i++) {
             if (i % 2 != 0) {
                 continue;
