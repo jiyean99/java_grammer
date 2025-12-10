@@ -98,7 +98,9 @@ public class C08String {
         System.out.println(st_______1.toUpperCase()); // HELLO
         System.out.println(st_______1.toLowerCase()); // hello
 
-        //📍 .replace(a,b) : a문자열을 b문자열로 대체
+        //📍 .
+        //
+        // (a,b) : a문자열을 b문자열로 대체
         String st________1 = "hello world world";
         String st___2 = st________1.replace("world", "java");
         System.out.println(st___2);
@@ -291,6 +293,23 @@ public class C08String {
         System.out.println(blankTotal); // 9
 
         // [📝실습예제] : 프로그래머스 - 문자열밀기
+        class Solution120921 {
+            public int solution(String A, String B) {
+                StringBuilder sb = new StringBuilder(A);
+                if (A.equals(B)) {
+                    return 0;
+                }
+                for (int i = 0; i < sb.length(); i++) {
+                    sb.insert(0, sb.charAt(sb.length() - 1));
+                    sb.deleteCharAt(sb.length() - 1);
+
+                    if (sb.toString().equals(B)) {
+                        return i+1;
+                    }
+                }
+                return -1;
+            }
+        }
     }
 
 }
