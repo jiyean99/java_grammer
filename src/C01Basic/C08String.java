@@ -172,6 +172,8 @@ public class C08String {
 
         /* ************ 문자열 비교 ************ */
         // 아스키코드가 큰 문자(뒤에 있는 문자)를 빼면 음수가 나옴. 즉 compareTo 매서드 사용 시 양수/음수/0 비교
+        // 문자열 정렬 시 유용하게 사용되는 매서드라 중요함
+        // 오름차순 정렬시 st1 vs st2 뭐가 먼저 나올까? 2가 먼저 나옴!(2가 더 작은값)
         String st___________1 = "hello";
         String st___________2 = "dello";
         String st___________3 = "hello";
@@ -181,7 +183,6 @@ public class C08String {
         System.out.println("compareTo 2->1 : "+st___________2.compareTo(st___________1)); //-4
         System.out.println("compareTo 1->3 : "+st___________1.compareTo(st___________3)); //0
         System.out.println("compareTo 4->3 : "+st___________4.compareTo(st___________3)); //1
-
 
 
 
