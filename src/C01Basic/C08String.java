@@ -98,9 +98,7 @@ public class C08String {
         System.out.println(st_______1.toUpperCase()); // HELLO
         System.out.println(st_______1.toLowerCase()); // hello
 
-        //📍 .
-        //
-        // (a,b) : a문자열을 b문자열로 대체
+        //📍 .replace(a,b) : a문자열을 b문자열로 대체
         String st________1 = "hello world world";
         String st___2 = st________1.replace("world", "java");
         System.out.println(st___2);
