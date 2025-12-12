@@ -8,7 +8,7 @@ public class C04IfStatements {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-//        /* ************ if문 ************ */
+//        ///* ************ if문 ************ *///
 //        // 도어락키 예제
 //        // 요구사항 : answer = '1234';이며,
 //        // 입력받은값과 비밀번호가 일치하면 "문이 열렸습니다", 일치하지 않으면 "비밀번호가 틀렸습니다"를 출력하도록 작성해라
@@ -46,7 +46,7 @@ public class C04IfStatements {
 //            System.out.println("걸어가시오.");
 //        }
 
-//        /* ************ 삼항연산자 : 결과값 = 조건식?반환값1:반환값2 ************ */
+//        ///* ************ 삼항연산자 : 결과값 = 조건식?반환값1:반환값2 ************ *///
 //        // [📝실습예제]
 //        // 요구사항: 도어락키 예제(삼항연산자)
 //        String answer = "1234";
@@ -54,7 +54,7 @@ public class C04IfStatements {
 //        String result = answerInput.equals(answer) ? "문이 열렸습니다." : "비밀번호가 틀렸습니다.";
 //        System.out.println(result);
 
-        /* ************ switch문 : if, else if 등 여러 조건식이 있을 때 조건식을 가독성 있게 표현한 구문 ************ */
+        ///* ************ switch문 : if, else if 등 여러 조건식이 있을 때 조건식을 가독성 있게 표현한 구문 ************ *///
         // [📝실습예제]
         // 요구사항: 고객센터 예제
         // callNumInput과 case는 equal 관계이고, 구문마다 반드시 break를 넣어줘야 함.

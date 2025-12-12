@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class C05LoopStatements {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        /* ************ while문 ************ */
+//        ///* ************ while문 ************ *///
 //        //📍 while문의 조건식에 변화를 주지 않으면, while문은 기본적으로 무한루프를 지향
 //        int a = 0;
 //        // 아래 while문은 10번 반복되는 반복문
@@ -63,14 +63,14 @@ public class C05LoopStatements {
 //            }
 //        }
 
-//        /* ************ do/while문 : 무조건 한번은 실행되는 while문 ************ */
+//        ///* ************ do/while문 : 무조건 한번은 실행되는 while문 ************ *///
 //        int a = 100;
 //        do {
 //            System.out.println("hello world");
 //        }
 //        while (a < 10); // 참이 아니지만 일단 한번은 실행됨!
 
-        /* ************ for문 : 초기식, 조건식, 증감식이 모두 포함돼 있는 반복문 ************ */
+        ///* ************ for문 : 초기식, 조건식, 증감식이 모두 포함돼 있는 반복문 ************ *///
         for (int i = 0; i < 10; i++) {
             System.out.println("hello wolrd");
         }
