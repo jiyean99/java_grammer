@@ -288,6 +288,27 @@ public class C13QueueStackDeque {
 
         // [📝관련문제] 프로그래머스 - 같은 숫자는 싫어
         // https://school.programmers.co.kr/learn/courses/30/lessons/12906
+        /*
+        import java.util.*;
+        public class Solution {
+            public int[] solution(int []arr) {
+                Stack<Integer> st = new Stack<>();
+
+                for (int i = 0; i < arr.length; i++) {
+                    if(st.isEmpty() || st.peek()!=arr[i]){
+                        st.add(arr[i]);
+                    }
+                }
+
+                int[] answer = new int[st.size()];
+                for(int i = answer.length - 1; i >= 0; i--) {
+                    answer[i] = st.pop();
+                }
+
+                return answer;
+            }
+        }
+        */
 
         ///* ************ Deque ************ *///
         // 양방향 큐(Double Ended Queue)를 의미하며, 양쪽 끝에서 모두 요소의 추가와 삭제가 가능한 자료 구조
