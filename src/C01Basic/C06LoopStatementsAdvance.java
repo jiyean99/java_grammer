@@ -71,7 +71,7 @@ public class C06LoopStatementsAdvance {
 //            arr[i] += 10;
 //        }
 //        //📍 참조형변수(객체타입)은 기본적으로 변수를 통한 출력시에 메모리값이 출력된다.
-//        //   그래서 내장된 매서드를 통해 힙메모리안의 객체값을 출력
+//        //   그래서 내장된 메서드를 통해 힙메모리안의 객체값을 출력
 //        System.out.println(arr); // 메모리 자체의 주소값을 출력함(난수값, 힙메모리 주소값)
 //        System.out.println(Arrays.toString(arr));
 //

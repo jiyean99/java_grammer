@@ -70,13 +70,13 @@ public class C02Variable {
 //        String st1 = ""; // 빈 문자열 할당
 //        String st2 = null; // null 할당, st2는 더이상 string이 아님
 //        System.out.println(st1.isEmpty()); // 출력: true
-//        System.out.println(st2.isEmpty()); // 출력 X(NullPointerException 에러 발생), null을 대상으로는 isEmpty라는 매서드가 실행되지 않음
+//        System.out.println(st2.isEmpty()); // 출력 X(NullPointerException 에러 발생), null을 대상으로는 isEmpty라는 메서드가 실행되지 않음
 
 //        String[] stArr = new String[5];
 //        stArr[1] = "hello1";
 //        stArr[3] = "hello3";
 //        for (int i =0; i<stArr.length; i++){
-//            System.out.println(stArr[i].length()); // 출력 X(NullPointerException 에러) : stArr[0]는 null이므로 length 매서드 실행이 되지않음
+//            System.out.println(stArr[i].length()); // 출력 X(NullPointerException 에러) : stArr[0]는 null이므로 length 메서드 실행이 되지않음
 //        }
 
 //        ///* ************ boolean : true or false ************ *///

@@ -29,7 +29,7 @@ public class C11Map {
         System.out.println("배구의 value값 : " + sports.get("배구")); // map에서 key값을 통한 검색 복잡도는 O(1);
 
 
-        ///* ************ Map의 주요 매서드 ************ *///
+        ///* ************ Map의 주요 메서드 ************ *///
         //📍 .put() : 값 세팅
 
         //📍 .get() : 값 얻어오기
@@ -37,16 +37,16 @@ public class C11Map {
 
         /* ************ Map의 전체 value 데이터 출력 ************ *///
         // cf) map의 key값 접근 시 인덱스 사용 불가(순서가 없으므로) -> for문을 통해 조회가 불가능함(뭐가 0번짼데?)
-        //📍 .keySet() : map의 전체 키 목록을 반환하는 매서드
+        //📍 .keySet() : map의 전체 키 목록을 반환하는 메서드
         // - 복잡도 : O(n)
-        for (String a : sports.keySet()) { // index로는 조회가 불가하므로 향상된 for문을 사용해야만 함(물론 key를 안뽑고 그냥 values 매서드를 써도 함)
+        for (String a : sports.keySet()) { // index로는 조회가 불가하므로 향상된 for문을 사용해야만 함(물론 key를 안뽑고 그냥 values 메서드를 써도 함)
             System.out.println("key : " + a + ", value : " + sports.get(a));
         }
         //key : 농구, value : 3
         //key : 배구, value : 2
         //key : 축구, value : 3
 
-        //📍 .values() : map의 전체 value 목록을 반환하는 매서드 (잘 안쓰임)
+        //📍 .values() : map의 전체 value 목록을 반환하는 메서드 (잘 안쓰임)
         for (int a : sports.values()) {
             System.out.println("전체 value 목록을 반환 : " + a);
         }
@@ -137,7 +137,7 @@ public class C11Map {
             }
         }
         */
-        // getOrDefault 매서드 사용 ⭐(가장 추천)
+        // getOrDefault 메서드 사용 ⭐(가장 추천)
         for (String a : list_arr) {
             like_map.put(a, like_map.getOrDefault(a, 0) + 1); // getOrDefault : a를 찾되, a의 키값이 있으면 like_map.get(a)리턴, 없으면 0을 리턴
         }

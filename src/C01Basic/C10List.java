@@ -8,7 +8,7 @@ public class C10List {
         // List와 Array의 가장 큰 차이는 값을 추가/삭제가 가능하다는 점
         // List는 인터페이스(카테고리)이고, 이의 구현체(클래스)로 ArrayList, LinkedList 등이 있다.
         // 결국 List는 그저 껍데기일 뿐!
-        // 또한 List, Map, Set 등은 컬렉션 프레임워크이며 이들은 비슷한 매서드를 공유함
+        // 또한 List, Map, Set 등은 컬렉션 프레임워크이며 이들은 비슷한 메서드를 공유함
 
         ///* ************ List 선언 방법 ************ *///
         //📍 List 선언 방법 (1) : ArrayList
@@ -43,14 +43,14 @@ public class C10List {
 
         ///* ************ List의 출력 ************ *///
         //📍Q) 참조자료형은 원래 힙메모리 주소가 출력되어야하는데 왜 출력이 되지?
-        //  A) 배열의 경우 매서드를 별도로 호출해주었는데,
-        //     list등의 컬렉션 프레임워크(map,set,list 등) 안에는 toString 매서드가 구현 및 자동 호출된다.
+        //  A) 배열의 경우 메서드를 별도로 호출해주었는데,
+        //     list등의 컬렉션 프레임워크(map,set,list 등) 안에는 toString 메서드가 구현 및 자동 호출된다.
         //     참조자료형 : 클래스 기반의 객체 -> 힙메모리에 저장
         //     나만의 클래스, 나만의 객체를 만들 때에는 toString 을 호출해줘야함
         //📍 cf) 클래스 선언 위치로 들어가서 확인해보기
-        // public class ArrayList<E> extends AbstractList<E> -> ArrayList는 AbstractList의 기능을 상속받았고, AbstractList는 AbstractCollection를 상속받는데, 이 때 AbstractCollection에 toString 매서드가 구현되어있다. 이 때 포맷도 확인 가능
+        // public class ArrayList<E> extends AbstractList<E> -> ArrayList는 AbstractList의 기능을 상속받았고, AbstractList는 AbstractCollection를 상속받는데, 이 때 AbstractCollection에 toString 메서드가 구현되어있다. 이 때 포맷도 확인 가능
 
-        ///* ************ List 주요 매서드 ************ *///
+        ///* ************ List 주요 메서드 ************ *///
         // 📍.add() : 리스트에 값을 하나씩 추가
         List<Integer> test_list = new ArrayList<>();
         test_list.add(10);
@@ -99,8 +99,8 @@ public class C10List {
         // 📍.contains() : 값이 있는지 없는지 여부를 불린값으로 리턴
         System.out.println("contains 20 : " + index_list.contains(20)); // 마찬가지로 복잡도 O(n)
 
-        // 📍 정렬 : 1) Collections클래스의 sort 매서드 사용, 2) 객체의 sort 매서드 사용
-        // 클래스명.매서드() vs 객체(변수명).매서드()
+        // 📍 정렬 : 1) Collections클래스의 sort 메서드 사용, 2) 객체의 sort 메서드 사용
+        // 클래스명.메서드() vs 객체(변수명).메서드()
         List<Integer> sort_list = new ArrayList<>();
         sort_list.add(5);
         sort_list.add(3);
@@ -111,11 +111,11 @@ public class C10List {
         // 1)
         Collections.sort(sort_list); // 오름차순
         Collections.sort(sort_list, Comparator.reverseOrder());
-        System.out.println("클래스매서드 오름차순 -> 내림차순 : " + sort_list);
+        System.out.println("클래스메서드 오름차순 -> 내림차순 : " + sort_list);
         // 2)
         sort_list.sort(Comparator.naturalOrder()); // 오름차순
         sort_list.sort(Comparator.reverseOrder()); // 내림차순
-        System.out.println("객체매서드 오름차순 -> 내림차순 : " + sort_list);
+        System.out.println("객체메서드 오름차순 -> 내림차순 : " + sort_list);
 
         ///* ************ 이중 리스트 : 리스트 안에 리스트 ************ *///
         List<List<Integer>> multi_list = new ArrayList<>();
@@ -178,7 +178,7 @@ public class C10List {
         }
         sb.append("]");
         System.out.println("리스트 안에 배열(값까지 출력) : " + sb);
-        //📍 리스트 안의 배열들을 정렬하는 기준은 길이, 0번인덱스 크기 등 다양하게 잡아야하기 때문에 추후에 배우는 매서드를 통해 정렬 작업을 진행
+        //📍 리스트 안의 배열들을 정렬하는 기준은 길이, 0번인덱스 크기 등 다양하게 잡아야하기 때문에 추후에 배우는 메서드를 통해 정렬 작업을 진행
 
 
         ///* ************  실습문제 모음집 ************ *///

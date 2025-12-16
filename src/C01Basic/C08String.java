@@ -26,7 +26,7 @@ public class C08String {
         System.out.println(st1.equals(st3)); // true
 
 
-        ///* ************ String 주요 매서드 ************ *///
+        ///* ************ String 주요 메서드 ************ *///
         //📍 .equals() : 힙 메모리의 문자열을 가져와서 equal 관계 비교
         String st_1 = "hello1";
         String st_2 = "Hello1";
@@ -56,7 +56,7 @@ public class C08String {
         System.out.println(st___1.contains("java")); // true
         System.out.println(st___1.contains("javascript")); // false
 
-        // 위 매서드들은 복잡도가 o(n)의 검색 속도를 가짐, 성능이 그다지 좋지는 않음
+        // 위 메서드들은 복잡도가 o(n)의 검색 속도를 가짐, 성능이 그다지 좋지는 않음
 
         //📍 += : 문자열 더하기. 성능 측면에서는 추후 배울 StringBuffer, StringBuilder 사용
         String st____1 = "hello";
@@ -148,7 +148,7 @@ public class C08String {
 
 
         ///* ************ 문자열 조립 : StringBuffer ************ *///
-        //📍 .append(), .insert(), .substring(), String의 주요 매서드 들 사용 가능
+        //📍 .append(), .insert(), .substring(), String의 주요 메서드 들 사용 가능
         String [] arr = {"java", "python", "javascript"};
         StringBuffer sb = new StringBuffer();
         String result = "";
@@ -164,15 +164,15 @@ public class C08String {
         System.out.println(result);
 
         ///* ************ 문자열 조립 : StringBuilder ************ *///
-        //📍 .append(), .insert(), .substring(), String의 주요 매서드 들 사용 가능
+        //📍 .append(), .insert(), .substring(), String의 주요 메서드 들 사용 가능
         //📍 성능이 뛰어나지만, 동시성 문제가 있음(Thread-Safe 하지 않음)
         // ex) 쓰레드 A가 append("hello")하고, 쓰레드 B가 append("world") 할 때 동시에 같은 변수를 사용해야 하는데
         //     두 작업이 중간에 섞여 "heworldllo" 이런식으로 잘못된 값을 만들 수 있음
         // 성능이 뛰어난 이유는? Thread-Safe하려면 A 입력시 B를 막아야함 -> 성능이 떨어지게 됨(사실 실전에선 그냥 buffer 쓰면 됨)
 
         ///* ************ 문자열 비교 ************ *///
-        // 아스키코드가 큰 문자(뒤에 있는 문자)를 빼면 음수가 나옴. 즉 compareTo 매서드 사용 시 양수/음수/0 비교
-        // 문자열 정렬 시 유용하게 사용되는 매서드라 중요함
+        // 아스키코드가 큰 문자(뒤에 있는 문자)를 빼면 음수가 나옴. 즉 compareTo 메서드 사용 시 양수/음수/0 비교
+        // 문자열 정렬 시 유용하게 사용되는 메서드라 중요함
         // 오름차순 정렬시 st1 vs st2 뭐가 먼저 나올까? 2가 먼저 나옴!(2가 더 작은값)
         String st___________1 = "hello";
         String st___________2 = "dello";
@@ -195,7 +195,7 @@ public class C08String {
             sb_1.append(st__________1.charAt(i));
         }
         System.out.println(sb_1);
-        // reverse 매서드 사용
+        // reverse 메서드 사용
         StringBuilder sb_2 = new StringBuilder(st__________1);
         sb_2.reverse();
         System.out.println(sb_2);

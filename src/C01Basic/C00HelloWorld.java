@@ -4,9 +4,9 @@ package C01Basic;
 // 1) 반드시 public class명과 파일명이 일치해야 함
 // 2) 일반적으로 대문자 알파벳으로 시작
 public class C00HelloWorld {
-    // 1) main : java 파일 실행 시 실행의 시작점이자, 가장 먼저 실행되는 매서드
-    // 2) public static : 어디에서든 접근 가능하고, 반환(리턴)값이 없는 매서드
-    // 3) 매서드명, 변수명은 일반적으로 소문자 알파벳으로 시작
+    // 1) main : java 파일 실행 시 실행의 시작점이자, 가장 먼저 실행되는 메서드
+    // 2) public static : 어디에서든 접근 가능하고, 반환(리턴)값이 없는 메서드
+    // 3) 메서드명, 변수명은 일반적으로 소문자 알파벳으로 시작
     public static void main(String[] args) {
         // println 단축어 : sout + tab
         System.out.println("hello world"); // 반드시 세미콜론으로 명령문 종료
@@ -22,7 +22,7 @@ public class C00HelloWorld {
          */
     }
 
-    // 직접 생성한 리턴값이 있는 매서드 예시
+    // 직접 생성한 리턴값이 있는 메서드 예시
     public static int method2(){
         return 10;
     }

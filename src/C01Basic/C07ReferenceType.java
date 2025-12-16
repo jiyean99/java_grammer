@@ -20,7 +20,7 @@ public class C07ReferenceType {
         String st2 = "Hello world"; // String은 예외적으로 리터럴 형식으로 값 세팅 허용
         int[] arr2 = {1, 3, 5, 7}; // 배열도 객체이므로 new 키워드를 써야하나, 예외적으로 리터럴형식으로 값 세팅 허용
 
-        //📍 참조자료형을 출력하면 힙메모리의 주소값이 출력되어야하나, String 내부에 toString 매서드가 구현 및 자동 호출되도록 설계
+        //📍 참조자료형을 출력하면 힙메모리의 주소값이 출력되어야하나, String 내부에 toString 메서드가 구현 및 자동 호출되도록 설계
         System.out.println(arr1); // 힙메모리 주소값 출력(toString 별도 호출 필요)
         System.out.println(Arrays.toString(arr1)); // 데이터 출력
         System.out.println(st1); // 내부에 toString 구현 및 자동 호출
@@ -37,9 +37,9 @@ public class C07ReferenceType {
         System.out.println(st_1.equals(st_2)); // true (*equals 메서드를 통해 힙메모리의 값 비교)
 
         ///* ************ WrapperClass : 기본형 타입을 Wrapping한 클래스(참조자료형) ************ *///
-        // wrapper 클래스의 주요 매서드 사용 예시
-        int i1 = 10; // 원시자료형은 별도의 매서드가 없음
-        Integer i2 = 10; // i2. 작성 시 Integer의 매서드들이 출력됨
+        // wrapper 클래스의 주요 메서드 사용 예시
+        int i1 = 10; // 원시자료형은 별도의 메서드가 없음
+        Integer i2 = 10; // i2. 작성 시 Integer의 메서드들이 출력됨
         // Integer i3 = new Integer(10); // int와 Integer는 호환성이 좋기때문에 박싱과 언박싱이 자유롭게 이루어짐
         String st_3 = Integer.toString(i1); // i1을 String으로 변환
         int i_3 = Integer.parseInt(st_3); // st_3을 Integer로 변환
