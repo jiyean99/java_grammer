@@ -37,7 +37,7 @@ public class C04Person2 {
     }
 
     //📍 객체 메서드들간의 호출은 문제없이 호출 가능
-    public void testMethod1(){
+    public void testMethod1() {
         String temp = this.returnPersonInfo();
     }
 

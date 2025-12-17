@@ -8,7 +8,7 @@ public class C05Scope {
     //📍 클래스 변수
     static int v1 = 10; // 유효범위에 있기때문에 main에서 사용 가능
     //📍 객체 변수 : 객체 메서드에서만 접근 가능
-    int v2 = 20; // 범위의 문제가 아니고, 객체변수가 아니라서 main에서 사용 불가
+    int v2 = 20; // 범위의 문제가 아니고, 객체변수라서 main에서 사용 불가
 
     public static void main(String[] args) {
         /// * ************ call by value ************ *///
