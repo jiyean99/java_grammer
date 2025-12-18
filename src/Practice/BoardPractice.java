@@ -1,4 +1,4 @@
-package C02MethodClass;
+package Practice;
 
 import java.util.ArrayList;
 import java.util.List;
