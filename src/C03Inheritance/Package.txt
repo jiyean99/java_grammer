@@ -1,0 +1,87 @@
+# 자바 패키지(Package) 완벽 정리
+
+패키지는 **클래스와 인터페이스의 집합**이자 **하나의 디렉터리**를 의미함.
+
+***
+
+## 패키지 선언 방법
+
+```java
+package 패키지이름;
+```
+
+***
+
+## 다른 파일에서 패키지 클래스 사용하기
+
+**import 사용**
+
+### 1. 특정 클래스만 가져오기
+```java
+import 패키지이름.클래스이름;
+```
+
+**예시**
+```
+src/C03Inheritance/C01Inheritance
+-> package C03Inheritance;
+
+src/C03Inheritance/C01Inheritance/test  
+-> package C03Inheritance.C01Inheritance.test;
+```
+
+### 2. 패키지 전체 가져오기
+```java
+import 패키지이름.*;
+```
+
+### 3. 클래스명 충돌 해결
+동일 클래스명 충돌 시 **전체 패키지 경로**로 호출
+
+***
+
+## 주요 특징
+
+- **계층 구조**: 패키지는 다른 패키지를 포함 가능  
+  → 디렉터리 구조는 점(.)으로 구분
+
+- **별표(*) 한계**  
+  ```
+  import java.awt.*;     // OK
+  import java.util.*;    // OK
+  import java.*;         // ❌ 불가능
+  ```
+  `*`는 **해당 패키지의 하위 패키지까지 포함 안 함**
+
+- **java.lang 자동 import**  
+  ```java
+  // import java.lang.String; ← 필요 없음
+  String str = "hello";    // 바로 사용 가능
+  ```
+
+***
+
+## 번외 – 잘못된 import 예시
+
+```java
+import java.io.*;    // ✅ OK
+import java.util.*;  // ✅ OK
+import java.*;       // ❌ 불가능
+```
+
+**이유**:  
+`java.util`에는 클래스들이 있지만  
+`java`는 **폴더 목록**일 뿐이라 import 불가
+
+***
+
+## 요약
+
+| 구분 | 사용법 | 특징 |
+|------|--------|------|
+| 선언 | `package 이름;` | 파일 최상단 |
+| 특정 클래스 | `import 패키지.클래스;` | 정확한 경로 |
+| 전체 패키지 | `import 패키지.*;` | 하위 패키지 제외 |
+| java.lang | import 불필요 | 자동 사용 가능 |
+
+패키지 구조 이해하면 **프로젝트 관리 + 클래스 충돌 방지** 확실함.

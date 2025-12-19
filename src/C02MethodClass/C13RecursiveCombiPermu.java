@@ -2,6 +2,7 @@ package C02MethodClass;
 
 /// * ************ 재귀함수 활용 대표적 알고리즘 예시 ************ *///
 // - 백트래킹, dfs 알고리즘에서 주로 사용 (또는 분할 정복)
+// - 보통 깊이를 알 수 없을 때 일반적으로 많이 사용한다(for문이 얼마나 반복되는지 알 수 없을 때)
 // 백트래킹 : https://www.acmicpc.net/problemset?sort=ac_desc&algo=5
 // dfs : https://www.acmicpc.net/problemset?sort=ac_desc&algo=127
 // 분할정복 : https://www.acmicpc.net/problemset?sort=ac_desc&algo=24
@@ -13,6 +14,8 @@ import java.util.List;
 /// * ************ 백트래킹 대표 예시 ************ *///
 // - 조합과 순열에서 경우의 수 찾기
 // for문 사용시 순열/조합 구할 시, (조합)이중포문 중 바깥이 0, 안쪽이 i+1 <-> (순열)바깥이 0, 안쪽이 0(이 때 같은건 걸러주기)
+// cf) 왜 백트래킹인가? 방금 전 선행했던 행위를 취소하는 구조가 백트래킹 구조이다.
+// 백트래킹 + 브루투포스(완전탐색) 같이 활용되는 경우가 많음
 public class C13RecursiveCombiPermu {
     public static void main(String[] args) {
         /// * ************ 맛보기 문제 ************ *///
