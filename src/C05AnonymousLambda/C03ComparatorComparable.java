@@ -14,7 +14,7 @@ public class C03ComparatorComparable {
         myList.add(20);
         myList.add(30);
         // 자바의 대부분 정렬 함수는 매개변수로 Comparator 객체 요구함
-        myList.sort(Comparator.naturalOrder());
+        myList.sort(Comparator.naturalOrder()); // Comparator 객체를 리턴하는 static(클래스) 메서드임
         // o1과 o2의 숫자값을 마이너스 형식으로 코딩을 하되,
         // o1이 먼저 있으면 오름차순, o2가 먼저 있으면 내림차순 (rule이라서 외워야함)
         // 이 때 매개변수가 두개만 있으면 정렬이 되나? -> 두개의 비교만 하면 정렬이 가능하다(like 선택정렬)
@@ -56,11 +56,110 @@ public class C03ComparatorComparable {
 
         // 배열, 리스트 정렬 외에 java의 그 외 정렬 자료 구조 (pq, Treeset, Treemap 등)
         Queue<String> pq = new PriorityQueue<>((o1, o2) -> o1.length()-o2.length());
-        // 백준 - 최대값 힙 문제 위 구조 활용하면 매우 쉽게 풀이 가능
 
         Set<String> treeSet = new TreeSet<>((o1, o2) -> o1.length() - o2.length());
 
-        // TODO 백준 : 단어정렬
-        // 백준 : 선긋기
+        // [📝실습예제] 리스트 안의 배열 정렬
+        // 요구사항 : 리스트 안의 배열에 1번째 index를 기준으로 오름차순 정렬해라
+        // [{4,5},{1,2},{5,0},{3,1}] -> [{5,0},{3,1},{1,2},{4,5}]
+        List<int[]> arrList = new ArrayList<>();
+        arrList.add(new int[]{4,5});
+        arrList.add(new int[]{1,2});
+        arrList.add(new int[]{5,0});
+        arrList.add(new int[]{3,1});
+
+        Collections.sort(arrList, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return o1[1] - o2[1];
+            }
+        });
+
+        for (int[] arr : arrList){
+            System.out.println(Arrays.toString(arr));
+        }
+
+        // [📝실습예제] 내가 직접 만든 객체의 정렬
+        // Student 클래스 요구사항 : 변수 name, age / 생성자 / getter / toString
+        // Student 객체 요구사항 : List에 4개쯤 담기.
+
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("lee", 20));
+        students.add(new Student("kim", 45));
+        students.add(new Student("park", 13));
+        students.add(new Student("hong", 20));
+        /* 객체의 나이순 정렬
+        Collections.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getAge() - o2.getAge();
+            }
+        });
+        */
+        // 객체의 이름순 정렬
+        // 방법(1) : Comparator를 구현한 익명객체 방식
+        /*
+        Collections.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
+        System.out.println(students);
+        */
+
+        // 방법(2) : Comparable을 구현한 방식
+        // Students 객체 안에 Comparable을 implements 하는 방식
+        // 단점: 객체 자체를 sort하는 방식은 불가능함, 유연성이 떨어짐
+        Collections.sort(students); // sort 실행 시 자동으로 클래스 안의 compareTo 메서드를 찾아서 호출됨
+
+
+        // TODO 문제풀이
+        //  백준 : 단어정렬
+        //  백준 : 절대값 힙
+        //  백준 : 선긋기
+    }
+}
+
+// [📝실습예제] 내가 직접 만든 객체의 정렬
+// Student 클래스 요구사항 : 변수 name, age / 생성자 / getter / toString
+// Student 객체 요구사항 : List에 4개쯤 담기.
+class Student implements Comparable<Student>{ // Comparable 사용을 위한 설계
+//class Student { // Comparator 사용시 기본 설계 구조
+    private String name;
+    private int age;
+
+    // 기본생성자
+    public Student(){
+
+    }
+    // 생성자 오버라이딩
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getter
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                '}';
+    }
+
+    // Comparable의 compareTo에서는 this와 매개변수로 주어지는 객체와 비교
+    // this가 앞에 있으면 오름차순, 매개변수 객체가 앞에 있으면 내림차순.
+    @Override
+    public int compareTo(Student o) {
+        return this.getName().compareTo(o.getName());
     }
 }

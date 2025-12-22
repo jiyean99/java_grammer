@@ -15,9 +15,4 @@ public class C04ProtectedClass {
     private String st2 = "hello java 2";
     String st3 = "hello java 3";
     protected String st4 = "hello java 4";
-
-
-
-
-
 }
