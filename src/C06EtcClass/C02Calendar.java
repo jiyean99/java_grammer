@@ -18,6 +18,10 @@ public class C02Calendar {
         // * java.time 패키지 - LocalDateTime, LocalDate, LocalTime 클래스
 
         /// * ************ Calendar 클래스 ************ *///
+        //📍 Calendar 클래스
+        // - 날짜를 처리하기 위한 다양한 기능을 제공해주는 추상 클래스
+        // - Calendar 클래스의 모든 필드는 클래스 변수(static variable)이므로, 객체생성 없이 사용
+        // - 그러나 Calendar의 문제점으로 인해, java.time 패키지 사용이 대세
         Calendar myCalendar = Calendar.getInstance(); // new가 없지만 Calendar.getInstance() 내부적으로 객체를 만들어줌
         System.out.println("getTime === " + myCalendar.getTime()); // 현재 시간정보 (Tue Dec 23 09:38:46 KST 2025)
         System.out.println("get YEAR === " + myCalendar.get(Calendar.YEAR)); //2025
