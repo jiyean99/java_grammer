@@ -3,9 +3,15 @@ package C06EtcClass;
 public class C01Math {
     public static void main(String[] args) {
         /// * ************ Math 클래스의 메서드 ************ *///
+        //📍 Math 클래스
+        // - 수학에서 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스
+        // - Math 클래스의 모든 메소드는 클래스 메소드(static method)
         // 객체를 따로 만들필요가 없는 클래스 메서드(static)
+        
         //📍 Math.random() : 임의의 수 반환, 0.0~1.0사이의 double 반환
+        // - 0.0 이상 1.0 미만의 범위에서 임의의 double형 값을 하나 생성하여 반환
         System.out.println("random : " + Math.random());
+        // System.out.println((int)(Math.random() * 100)); // 0 ~ 99
 
         // [📝실습예제]
         // 로또번호 7개 뽑기. 0-99까지의 임의 숫자
@@ -19,17 +25,20 @@ public class C01Math {
         //📍 Math.ceil() : 올림
         //📍 Math.floor() : 내림
         //📍 Math.round() : 반올림
+        // - 각각 내림, 올림, 반올림 하여 정수 반환
         System.out.println("ceil : " + Math.ceil(5.7)); //6.0
         System.out.println("floor : " + Math.floor(5.7)); //5.0
         System.out.println("round : " + Math.round(5.7)); //6
 
         //📍 Math.max(a,b) : 두 수의 최대값
         //📍 Math.min(a,b) : 두 수의 최소값
+        // - 두 값을 비교하여 max, min 반환
         System.out.println("max : " + Math.max(10, 20)); //20
         System.out.println("min : " + Math.min(10, 20)); //10
 
         //📍 Math.pow(a,b) : a의 b승(제곱)
         //📍 Math.sqrt(a,b) : a의 제곱근
+        // - 각각 제곱 연산, 제곱근 반환
         System.out.println("pow : " + Math.pow(2,3)); //8.0
         System.out.println("square root : " + Math.sqrt(25)); //5
 
