@@ -14,6 +14,18 @@ public class C03EnumMain {
         // - 코드가 간략해지며 가독성 향상
         // - 열거체를 비교할 때 실제 값뿐만 아니라 타입까지도 체크
 
+        //📍 ChronoField 열거체(enum)
+        // - 날짜와 시간을 나타낼 때 사용하는 열거체
+        //   - 특정한 숫자값을 get함수의 input값으로 주는데 사용
+        //   - 열거체에 대해서는 추후 학습
+        // - 주요 열거체
+        //   - YEAR, MONTH_OF_YEAR, DAY_OF_MONTH, DAY_OF_WEEK
+        //   - AMPM_OF_DAY (오전/오후: 0/1)
+        //   - HOUR_OF_DAY (시: 0~23)
+        //   - CLOCK_HOUR_OF_DAY (시: 1~24)
+        //   - CLOCK_HOUR_OF_AMPM (시: 1~12)
+        //   - DAY_OF_YEAR (해당 연도의 몇 번째 날: 1~365, 윤년 366)
+
         // (1) classGrade를 일반 문자열로 설계했을 경우
         // - 데이터 종류에 대한 통제 불가
 //        Student s1 = new Student("hong1", "FIRST_GRADE");
