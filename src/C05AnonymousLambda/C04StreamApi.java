@@ -36,7 +36,7 @@ public class C04StreamApi {
         //   * 원본 보존, 순수 함수형 처리
         Arrays.stream(arr).forEach(a -> System.out.println(a));
 
-        /// * ************ 주요 메서드 (생성 -> 중개연산 -> 소모연산)************ *///
+        /// * ************ 주요 문법 (생성 -> 중개연산 -> 소모연산) ************ *///
         //📍 .stream() : 스트림의 생성
         // ex) List 자료의 스트림 생성
         List<String> myList = new ArrayList<>();
@@ -61,7 +61,7 @@ public class C04StreamApi {
         IntStream distinctStream = Arrays.stream(intArr).distinct();
         // - sorted : 정렬
         IntStream sortedStream = Arrays.stream(intArr).sorted();
-        // - mapToInt : IntStream 형태로 변환해주는 map
+        // - mapToInt : IntStream 형태로 변환해주는 map(다른 원시자료형들도 별도의 stream과 메서드가 존재 e.g. mapToDouble - DoubleStream)
         Stream<String> stringStream = Arrays.stream(strArr);
         IntStream mapToIntStream = stringStream.mapToInt(a -> a.length());
         // cf) 문자열 조작은 가능하다
