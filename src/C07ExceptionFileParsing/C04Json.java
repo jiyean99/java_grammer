@@ -35,6 +35,11 @@ public class C04Json {
         // 실제 값 세팅은 private로 설계되어 있어 직접 접근이 불가함
         // 이 때 , java의 reflection 기술을 통해 런타임 시점에 private 변수도 직접 접근 가능
         // 단, 필드값을 유추할 수 있도록 반드시 타입이 일치하는 <getter메서드>와 <기본생성자>를 생성해야함.
+        // TODO cf) reflection 기술 추가 설명(그다지 효용이 있는 개념은 X, 중요도 낮음)
+        //  json 데이터에서 id뽑아내고, name 뽑아내고,, student 객체로 만들겠다는 뜻임
+        //  근데 Student 클래스에는 setter가 없는데 어떻게 객체로 만드는가? -> 리플렉션 기술 사용
+        //  런타임 시점에 자바 클래스 객체 메서드에 접근할 수 잇는 기술
+        //  해당 기술이 있다면 각각의 변수에 직접 접근하여 세팅할 수 있게 되는 것
         // 최종적으로는 파싱을 하고, 객체를 만드는 기술이 집합되어있는 코드임
         // Cannot deserialize value of type `long` from String "abd" -> 역직렬화 에러가 발생하는 모습 확인
         Student myStudent = o1.readValue(jsonString, Student.class);
