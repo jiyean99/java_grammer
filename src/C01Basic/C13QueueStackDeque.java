@@ -29,7 +29,6 @@ public class C13QueueStackDeque {
         System.out.println("Queue poll After : " + myQue); // [20, 30]
 
         ///* ************ 가장 많이 사용되는 일반적인 큐 : LinkedList⭐ ************ *///
-        // TODO 테스트
 
         //📍 while문을 통한 Queue 출력 방식 확인
         // 프린터 만들기
