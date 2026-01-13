@@ -73,8 +73,8 @@ public class C02ExceptionAdvance {
     /// * ************ 주요 예외사항 ************ *///
     // - Exception: 모든 예외의 조상 클래스⭐ (java.lang.Exception)
     // - Checked Exception (외부시스템 인터랙션, 예외처리/throws 강제)
-    //   - FileNotFoundException, IOException(입출력), SQLException(DB)
-    //   - Spring에서 rollback 안됨 → try/catch 후 RuntimeException 발생 필요
+    //   - FileNotFoundException(파일 처리), IOException(입출력 등 네트워크 통신), SQLException(DB 처리)
+    //   - Spring에서 rollback 안됨 → try/catch 후 "RuntimeException" 발생 필요(모든 Unchecked Exception의 조상⭐)
     // - Unchecked Exception (RuntimeException의 하위, 대부분의 예외)
     //   - ArithmeticException(0으로 나누기)
     //   - NullPointerException(null 객체 접근)

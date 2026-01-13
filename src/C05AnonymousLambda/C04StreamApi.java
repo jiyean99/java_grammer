@@ -142,6 +142,7 @@ public class C04StreamApi {
         // - 조건 : 하나의 메서드(실행문)만을 호출하는 경우 사용 가능
         Arrays.stream(stArr).forEach(a -> System.out.println(a)); // 메서드명: println, 클래스명: System.out
         Arrays.stream(stArr).forEach(System.out::println);
+        // Arrays.stream(stArr).toArray(String[]::new);
 
 
         // [📝실습예제]

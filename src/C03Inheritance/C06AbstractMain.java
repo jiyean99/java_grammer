@@ -8,7 +8,7 @@ public class C06AbstractMain {
         /// * ************ 추상클래스(abstract)의 객체 생성 ************ *///
         // 추상클래스는 구현체가 없는 메서드가 있으므로, 기본적으로 객체 생성 불가능
         //AbstractAnimal a1 = new AbstractAnimal();
-        /* 아래 구조는 객체가 아님 나중에 다룰 내용
+        /* 아래 구조는 객체가 아님 나중에 다룰 내용 -> 익명객체
         AbstractAnimal a1 = new AbstractAnimal() {
             @Override
             void makeSound2() {

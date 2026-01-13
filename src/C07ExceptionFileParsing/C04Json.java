@@ -33,7 +33,7 @@ public class C04Json {
 
         //📍 (2-2) 직접 만든 객체로 파싱하기 - Map
         // 실제 값 세팅은 private로 설계되어 있어 직접 접근이 불가함
-        // 이 때 , java의 reflection 기술을 통해 런타임 시점에 private 변수도 직접 접근 가능
+        // 이 때 , java의 reflection 기술을 통해 "런타임 시점"에 private 변수도 직접 접근 가능
         // 단, 필드값을 유추할 수 있도록 반드시 타입이 일치하는 <getter메서드>와 <기본생성자>를 생성해야함.
         // TODO cf) reflection 기술 추가 설명(그다지 효용이 있는 개념은 X, 중요도 낮음)
         //  json 데이터에서 id뽑아내고, name 뽑아내고,, student 객체로 만들겠다는 뜻임
